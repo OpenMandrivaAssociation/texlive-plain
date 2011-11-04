@@ -1,3 +1,9 @@
+# revision 20544
+# category Package
+# catalog-ctan /macros/plain/base
+# catalog-date 2009-06-23 17:13:15 +0200
+# catalog-license knuth
+# catalog-version 3.141592653
 Name:		texlive-plain
 Version:	3.141592653
 Release:	1
@@ -60,6 +66,7 @@ also discussed in the book).
 %{_texmfdistdir}/tex/plain/config/pdftexmagfix.tex
 %{_texmfdistdir}/tex/plain/config/tex.ini
 %{_texmfdistdir}/tex/plain/config/xetex.ini
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -70,3 +77,5 @@ also discussed in the book).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar makeindex tex %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
