@@ -14,7 +14,8 @@ License:	KNUTH
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plain.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Conflicts:	texlive-texmf <= 20110705-3
 
 %description
