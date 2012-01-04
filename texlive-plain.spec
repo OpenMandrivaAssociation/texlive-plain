@@ -6,7 +6,7 @@
 # catalog-version 3.141592653
 Name:		texlive-plain
 Version:	3.141592653
-Release:	2
+Release:	3
 Summary:	The Plain TeX format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/base
