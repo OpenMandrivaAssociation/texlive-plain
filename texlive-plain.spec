@@ -1,16 +1,16 @@
-# revision 20544
+# revision 26647
 # category Package
-# catalog-ctan /macros/plain/base
-# catalog-date 2009-06-23 17:13:15 +0200
-# catalog-license knuth
-# catalog-version 3.141592653
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-plain
-Version:	3.141592653
-Release:	3
-Summary:	The Plain TeX format
+Version:	20120808
+Release:	1
+Summary:	TeXLive plain package
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/base
-License:	KNUTH
+URL:		http://tug.org/texlive
+License:	http://www.tug.org/texlive/LICENSE.TL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plain.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
@@ -18,9 +18,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-Contains files used to build the Plain TeX format, as described
-in the TeXbook, together with various supporting files (some
-also discussed in the book).
+TeXLive plain package.
 
 %post
     %{_sbindir}/texlive.post
@@ -29,7 +27,6 @@ also discussed in the book).
     if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
     fi
-    rm -fr %{_texmfvardir}/web2c/tex
 
 #-----------------------------------------------------------------------
 %files
