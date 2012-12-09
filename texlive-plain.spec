@@ -66,3 +66,25 @@ TeXLive plain package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar makeindex tex %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120808-1
++ Revision: 812783
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.141592653-3
++ Revision: 754962
+- Rebuild to reduce used resources
+
+* Tue Nov 08 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.141592653-2
++ Revision: 729092
+- texlive-plain
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.141592653-1
++ Revision: 719270
+- texlive-plain
+- texlive-plain
+- texlive-plain
+- texlive-plain
+
