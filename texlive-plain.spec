@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-plain
 Version:	20120808
-Release:	6
+Release:	7
 Summary:	TeXLive plain package
 Group:		Publishing
 URL:		http://tug.org/texlive
