@@ -1,6 +1,6 @@
 Name:		texlive-plain
 Version:	57963
-Release:	1
+Release:	2
 Summary:	TeXLive plain package
 Group:		Publishing
 URL:		http://tug.org/texlive
