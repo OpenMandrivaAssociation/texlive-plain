@@ -1,38 +1,21 @@
-Name:		texlive-plain
-Version:	57963
-Release:	2
-Summary:	TeXLive plain package
+%global tl_name plain
+%global tl_revision 75712
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.1415926535
+Release:	%{tl_revision}.1
+Summary:	The Plain TeX format
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plain.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/plain/base
+License:	knuth
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/plain.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive plain package.
+Contains files used to build the Plain TeX format, as described in the
+TeXbook, together with various supporting files (some also discussed in
+the book).
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/makeindex/plain
-%{_texmfdistdir}/tex/plain
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar makeindex tex %{buildroot}%{_texmfdistdir}
